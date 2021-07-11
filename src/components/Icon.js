@@ -10,7 +10,6 @@ function Icon(props) {
     case "Dust":
     case "Fog":
     case "Sand":
-    case "Dust":
     case "Ash":
     case "Squall":
       icon = (
