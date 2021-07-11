@@ -1,5 +1,11 @@
 import React from "react";
 
+// Components
+import Icon from "./Icon";
+
+// Styles
+import styles from "./styles/location.module.css";
+
 function Location(props) {
   // Current day of the week
   let d = new Date();
@@ -9,13 +15,13 @@ function Location(props) {
   let year = d.toLocaleString("en-US", { year: "numeric" });
 
   return (
-    <div className="location">
-      <h1>
-        <span>*ICON*</span>Dallas, TX
-      </h1>
-      <p className="date">
+    <div className={styles.location}>
+      <div className={`small ${styles.city}`}>
+        <Icon type="Location" /> <strong>Dallas, TX</strong>
+      </div>
+      <div className="small">
         {weekday}, {month} {day}, {year}
-      </p>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,235 @@
+:root {
+  /* Colors */
+  --black: #4a4a4a;
+  --white: #fff;
+  --lightGrey: #eee;
+  --lightBlue: #4ecfed;
+  --blue: #2f94c4;
+  --darkBlue: #115da3;
+
+  /* Typography */
+}
+
+/* Reset */
+html,
+body {
+  max-width: 100%;
+  font-family: "Open Sans";
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Typography */
+.large {
+  font-size: 3em;
+}
+.medium {
+  font-size: 1.5em;
+}
+.small {
+  font-size: 1em;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom left,
+    var(--lightBlue),
+    var(--blue),
+    var(--darkBlue)
+  );
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-current {
+  width: 75%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  padding: 0 0 0 15px;
+}
+
+.header-toggle {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+  padding: 0 15px 0 0;
+}
+
+.switch-button {
+  background: rgba(255, 255, 255, 0.56);
+  border-radius: 30px;
+  overflow: hidden;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #115da3;
+  background-color: #2685bd;
+  position: relative;
+  padding-right: 25px;
+  position: relative;
+  font-size: 0.8em;
+}
+.true.switch-button .switch-button-label-span {
+  color: var(--white);
+}
+.switch-button:before {
+  content: "C°";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+.false.switch-button:before {
+  color: var(--white);
+}
+.switch-button-checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.switch-button-checkbox:checked + .switch-button-label:before {
+  transform: translateX(35px);
+  transition: transform 300ms linear;
+}
+.switch-button-checkbox + .switch-button-label {
+  position: relative;
+  height: 30px;
+  padding: 5px 0;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+.switch-button-checkbox + .switch-button-label:before {
+  content: "";
+  background: var(--white);
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  margin: 1px 0 0 1px;
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.switch-button-checkbox + .switch-button-label .switch-button-label-span {
+  position: relative;
+  margin: 0 0 0 -5px;
+}
+
+.header-image {
+  width: 100%;
+  height: 50%;
+  order: 3;
+  background-image: url("./assets/images/dallas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-location {
+  width: 100%;
+  height: 25%;
+  order: 4;
+  text-align: center;
+}
+
+article {
+  width: 100%;
+  height: 50%;
+  padding: 0 0 15px 0;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 750px;
+    max-height: 90%;
+  }
+
+  header {
+    position: relative;
+    height: 70%;
+  }
+
+  .header-current {
+    order: 2;
+    position: absolute;
+    top: 25%;
+    left: 15px;
+  }
+
+  .header-toggle {
+    order: 3;
+    position: absolute;
+    top: 25%;
+    right: 15px;
+  }
+
+  .header-image {
+    order: 4;
+    height: 75%;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .header-location {
+    order: 1;
+  }
+
+  article {
+    height: 30%;
+  }
+}

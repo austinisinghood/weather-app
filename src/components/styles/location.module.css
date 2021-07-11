@@ -1,0 +1,23 @@
+.location {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding: 15px 0;
+}
+
+.city {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 5px 0;
+}
+
+.city svg {
+  width: 20px;
+  fill: var(--white);
+}

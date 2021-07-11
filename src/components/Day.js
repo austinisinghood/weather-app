@@ -3,6 +3,9 @@ import React from "react";
 // Components
 import Icon from "../components/Icon";
 
+// Styles
+import styles from "./styles/day.module.css";
+
 function Day(props) {
   // Day of the week for each item
   const unixTimestamp = props.data.dt;
@@ -29,10 +32,16 @@ function Day(props) {
   let type = props.data.weather[0].main;
 
   return (
-    <div className="day">
-      <p>{weekday[dateObject.getDay(dayNumber)]}</p>
-      <Icon type={type} />
-      <p>{temp}°</p>
+    <div className={styles.day}>
+      <div className={`medium ${styles.weekday}`}>
+        {weekday[dateObject.getDay(dayNumber)]}
+      </div>
+      <div className={styles.weather}>
+        <div className={styles.icon}>
+          <Icon type={type} />
+        </div>
+        <div className="medium">{temp}°</div>
+      </div>
     </div>
   );
 }
