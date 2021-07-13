@@ -14,7 +14,7 @@ function Icon(props) {
     case "Squall":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -27,10 +27,24 @@ function Icon(props) {
         </svg>
       );
       break;
+    // Close
+    case "Close":
+      icon = (
+        <svg
+          focusable="false"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 352 512"
+        >
+          <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+        </svg>
+      );
+      break;
+    // Tornado
     case "Tornado":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -49,7 +63,7 @@ function Icon(props) {
     case "Clear":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -71,7 +85,7 @@ function Icon(props) {
     case "Clouds":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -86,7 +100,7 @@ function Icon(props) {
     case "Drizzle":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -101,11 +115,11 @@ function Icon(props) {
         </svg>
       );
       break;
-    // Rain
+    // Location
     case "Location":
       icon = (
         <svg
-          enable-background="new 0 0 92 92"
+          enableBackground="new 0 0 92 92"
           version="1.1"
           viewBox="0 0 92 92"
           xmlSpace="preserve"
@@ -115,10 +129,11 @@ function Icon(props) {
         </svg>
       );
       break;
+    // Rain
     case "Rain":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -135,7 +150,7 @@ function Icon(props) {
     case "Snow":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -155,7 +170,7 @@ function Icon(props) {
     case "Thunderstorm":
       icon = (
         <svg
-          enable-background="new 0 0 91 91"
+          enableBackground="new 0 0 91 91"
           version="1.1"
           viewBox="0 0 91 91"
           xmlSpace="preserve"
@@ -168,7 +183,17 @@ function Icon(props) {
       break;
     // Default
     default:
-      icon = "Default Icon";
+      icon = (
+        <svg
+          enableBackground="new 0 0 92 92"
+          version="1.1"
+          viewBox="0 0 92 92"
+          xmlSpace="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="m88 11h-84c-2.2 0-4 1.8-4 4v62c0 2.2 1.8 4 4 4h84c2.2 0 4-1.8 4-4v-62c0-2.2-1.8-4-4-4zm-4 8v33.5l-6.7-5.6c-1.5-1.2-3.6-1.2-5.1 0l-10.8 9-25.1-21.8c-1.5-1.3-3.6-1.3-5.1-0.1l-23.2 18.7v-33.7h76zm-76 54v-10l25.6-20.7 25.1 21.8c1.5 1.3 3.7 1.3 5.2 0.1l10.8-9 9.3 7.8v10h-76zm44.1-40.4c0-4 3.3-7.3 7.4-7.3s7.4 3.3 7.4 7.3-3.3 7.3-7.4 7.3-7.4-3.3-7.4-7.3z" />
+        </svg>
+      );
   }
 
   return <>{icon}</>;

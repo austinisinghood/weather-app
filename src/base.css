@@ -174,10 +174,6 @@ header {
   width: 100%;
   height: 50%;
   order: 3;
-  background-image: url("./assets/images/dallas.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .header-location {
@@ -192,6 +188,125 @@ article {
   height: 50%;
   padding: 0 0 15px 0;
   overflow: scroll;
+}
+
+.settings-link {
+  color: var(--white);
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.settings-link:hover {
+  text-decoration: underline;
+}
+
+.modal-container {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.95;
+}
+
+.modal {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 6px;
+}
+
+.modal-header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--darkBlue);
+}
+
+.modal-title {
+  font-weight: bold;
+  color: var(--white);
+  padding: 0 0 0 15px;
+}
+
+.close-modal {
+  width: 30px;
+  height: 30px;
+  padding: 0 15px 0 0;
+}
+
+.modal-header svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--white);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.modal-header svg:hover {
+  fill: var(--lightBlue);
+}
+
+.modal-content {
+  width: 90%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1em;
+  font-family: "Open Sans";
+  color: var(--black);
+  background-color: var(--lightGrey);
+  border: 2px solid var(--lightBlue) !important;
+  border-radius: 4px;
+  margin: 0 0 5px 0;
+  padding: 10px;
+  outline: none;
+  box-shadow: none !important;
+  transition: all 0.5s;
+}
+input:hover,
+input:focus {
+  background-color: var(--white);
+  border: 2px solid var(--blue);
+}
+
+button {
+  width: 100%;
+  font-size: 1em;
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-decoration: none !important;
+  color: var(--white);
+  background-color: var(--lightBlue);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--lightBlue);
+  border-radius: 6px;
+  margin: 15px 0 0 0;
+  padding: 5px 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
 }
 
 @media (min-width: 768px) {
@@ -222,7 +337,6 @@ article {
   .header-image {
     order: 4;
     height: 75%;
-    border-radius: 6px 6px 0 0;
   }
 
   .header-location {
