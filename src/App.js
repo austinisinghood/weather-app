@@ -112,9 +112,9 @@ function App() {
             </div>
             <div className="header-location">
               <Location data={weatherData} />
-              {/* <div className="settings-link" onClick={toggleModal}>
+              <div className="settings-link" onClick={toggleModal}>
                 Settings
-              </div> */}
+              </div>
             </div>
           </header>
           <article>

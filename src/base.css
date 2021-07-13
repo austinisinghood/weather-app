@@ -194,6 +194,8 @@ article {
   color: var(--white);
   font-size: 0.8em;
   cursor: pointer;
+  /* For now */
+  display: none;
 }
 .settings-link:hover {
   text-decoration: underline;
