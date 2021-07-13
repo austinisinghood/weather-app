@@ -60,44 +60,44 @@ function App() {
   );
 
   // Toggle modal
-  // function toggleModal() {
-  //   setModal(!modal);
-  // }
+  function toggleModal() {
+    setModal(!modal);
+  }
 
   // Close modal
-  // function closeModal() {
-  //   setModal(false);
-  // }
+  function closeModal() {
+    setModal(false);
+  }
 
   // Handle lat/long change
-  // function handleLatLongChange(e) {
-  //   setLat(e.target.value);
-  //   setLong(e.target.value);
-  //   setModal(false);
-  // }
+  function handleLatLongChange(e) {
+    setLat(e.target.value);
+    setLong(e.target.value);
+    setModal(false);
+  }
 
   // Modal
-  // let modalContainer = (
-  //   <div className="modal-container">
-  //     <div className="modal">
-  //       <div className="modal-header">
-  //         <div className="medium modal-title">Settings</div>
-  //         <div className="close-modal" onClick={closeModal}>
-  //           <Icon type="Close" />
-  //         </div>
-  //       </div>
-  //       <div className="modal-content">
-  //         <input type="text" value={lat} />
-  //         <input type="text" value={long} />
-  //         <button onClick={handleLatLongChange}>Click</button>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
+  let modalContainer = (
+    <div className="modal-container">
+      <div className="modal">
+        <div className="modal-header">
+          <div className="medium modal-title">Settings</div>
+          <div className="close-modal" onClick={closeModal}>
+            <Icon type="Close" />
+          </div>
+        </div>
+        <div className="modal-content">
+          <input type="text" value={lat} />
+          <input type="text" value={long} />
+          <button onClick={handleLatLongChange}>Click</button>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <main>
-      {/* {modal ? modalContainer : ""} */}
+      {modal ? modalContainer : ""}
       {loading ? (
         <Loader />
       ) : (
